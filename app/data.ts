@@ -4,6 +4,15 @@ export const links = [
   { label: "LinkedIn", href: "https://linkedin.com/in/r-miaoo", text: "r-miaoo" },
 ];
 
+// Accounts the Activity graph pulls from (app/activity/sources.ts). Leave one empty to leave it out.
+// GitLab takes a profile URL, so it works for school or company GitLab servers too.
+export const activityAccounts = {
+  github: "R1chard04",
+  gitlab: "https://git.uwaterloo.ca/r5miao",
+  leetcode: "Richy_Rich",
+  chesscom: "RichyRichSwimmer",
+};
+
 export const education = {
   school: "University of Waterloo",
   url: "https://uwaterloo.ca/",
@@ -101,11 +110,6 @@ export const projects: { name: string; kind: string; desc: string; url?: string 
     kind: "Operating system",
     url: "https://github.com/R1chard04/RTOS-Kernel",
     desc: "A preemptive kernel for the ARM Cortex-M4 that schedules up to 16 tasks with Earliest Deadline First, with context switching in ARM assembly via PendSV and SVC-based system calls. C on an STM32.",
-  },
-  {
-    name: "UW Help Me",
-    kind: "Mobile app",
-    desc: "A student-only platform where Waterloo students request and offer peer-to-peer help. React, Expo, and Supabase.",
   },
   {
     name: "WLP4-To-MIPS",

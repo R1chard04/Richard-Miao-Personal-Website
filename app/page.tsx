@@ -1,6 +1,13 @@
 import { links, education, skills, experience, projects, archive } from "./data";
 import { Reveal } from "./reveal";
 import { Background } from "./background";
+import { Greeting } from "./greeting";
+import { getActivity } from "./activity/sources";
+import { ActivityGraph } from "./activity/graph";
+
+// Rebuild the page at most every 6 hours, to refresh the Activity graph
+// (matches REVALIDATE in activity/sources.ts; Next needs a literal here).
+export const revalidate = 21600;
 
 function Org({ name, url }: { name: string; url: string }) {
   return (
@@ -22,13 +29,15 @@ function Section({ label, children }: { label: string; children: React.ReactNode
   );
 }
 
-export default function Home() {
+export default async function Home() {
+  const activity = await getActivity();
   return (
     <main>
       <Background />
       <Reveal />
       <header className="intro">
         <div>
+          <Greeting />
           <h1 aria-label="Richard Miao">
             {"Richard Miao".split("").map((c, i) => (
               <span key={i} className="char" style={{ animationDelay: `${i * 35}ms` }} aria-hidden="true">
@@ -101,6 +110,12 @@ export default function Home() {
           </ul>
         </details>
       </Section>
+
+      {activity.sources.length > 0 && (
+        <Section label="Activity">
+          <ActivityGraph {...activity} />
+        </Section>
+      )}
 
       <Section label="Education">
         <div className="row">
