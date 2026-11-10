@@ -152,7 +152,7 @@ export default async function Home() {
         </dl>
       </Section>
 
-      <footer>© {new Date().getFullYear()} Richard Miao · Cookieless analytics by Cloudflare</footer>
+      <footer>© {new Date().getFullYear()} Richard Miao · Cookieless analytics by Umami and Cloudflare</footer>
     </main>
   );
 }
