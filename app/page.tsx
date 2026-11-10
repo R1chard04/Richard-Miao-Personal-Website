@@ -84,7 +84,7 @@ export default function Home() {
         {projects.map((p) => (
           <article key={p.name} className="project">
             <div className="row">
-              <h3>{p.name}</h3>
+              {p.url ? <Org name={p.name} url={p.url} /> : <h3>{p.name}</h3>}
               <span className="dates">{p.kind}</span>
             </div>
             <p>{p.desc}</p>

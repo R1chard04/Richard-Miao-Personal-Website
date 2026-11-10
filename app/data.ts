@@ -90,7 +90,18 @@ export const experience = [
   },
 ];
 
-export const projects = [
+export const projects: { name: string; kind: string; desc: string; url?: string }[] = [
+  {
+    name: "PolyEdge",
+    kind: "Trading infrastructure",
+    desc: "A 24/7 AWS pipeline that records 16K+ live order books to train and backtest trading models, rebuilding each book from a duplicated, out-of-order WebSocket feed. Includes an exchange simulator that models queue position and latency across 300+ markets at 80x real time. Python, AWS, and Terraform.",
+  },
+  {
+    name: "Real-Time OS Kernel",
+    kind: "Operating system",
+    url: "https://github.com/R1chard04/RTOS-Kernel",
+    desc: "A preemptive kernel for the ARM Cortex-M4 that schedules up to 16 tasks with Earliest Deadline First, with context switching in ARM assembly via PendSV and SVC-based system calls. C on an STM32.",
+  },
   {
     name: "UW Help Me",
     kind: "Mobile app",
