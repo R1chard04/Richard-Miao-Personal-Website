@@ -1,3 +1,7 @@
+// The live address. Link previews (app/opengraph-image.tsx) use it; change it if
+// the site moves to its own domain.
+export const siteUrl = "https://richardmiao.vercel.app";
+
 export const links = [
   { label: "Email", href: "mailto:richard.miao@uwaterloo.ca", text: "richard.miao@uwaterloo.ca" },
   { label: "GitHub", href: "https://github.com/R1chard04", text: "R1chard04" },
