@@ -133,6 +133,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 .activity-caption { margin: 0.6rem 0 0; min-height: 3.2em; line-height: 1.6; color: var(--muted); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
 
 .skills { margin: 0; }
+.courses { margin-top: 1.25rem; }
 .skills div { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; }
 .skills div + div { margin-top: 0.5rem; }
 .skills dt { color: var(--muted); font-size: 0.9rem; }

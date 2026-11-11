@@ -20,6 +20,17 @@ export const education = {
   dates: "2022 – 2027",
   detail: "3.92 GPA · Dean's Honours List",
   awards: ["Gloria Baylis Award", "President's Scholarship of Distinction"],
+  coursework: [
+    "Distributed Systems",
+    "Data-Intensive Distributed Computing",
+    "Operating Systems",
+    "Computer Networks",
+    "Concurrency",
+    "Algorithms",
+    "Data Structures",
+    "Databases",
+    "Software Design and Architectures",
+  ],
 };
 
 export const skills = [

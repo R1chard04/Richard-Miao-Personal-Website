@@ -126,6 +126,12 @@ export default async function Home() {
           {education.degree} · {education.detail}
         </p>
         <p className="meta">{education.awards.join(" · ")}</p>
+        <dl className="skills courses">
+          <div>
+            <dt>Coursework</dt>
+            <dd>{education.coursework.join(", ")}</dd>
+          </div>
+        </dl>
       </Section>
 
       <Section label="Toolbox">
@@ -152,7 +158,7 @@ export default async function Home() {
         </dl>
       </Section>
 
-      <footer>© {new Date().getFullYear()} Richard Miao · Cookieless analytics by Umami and Cloudflare</footer>
+      <footer>© {new Date().getFullYear()} Richard Miao</footer>
     </main>
   );
 }
